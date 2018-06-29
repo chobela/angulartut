@@ -1,3 +1,5 @@
 <app-header></app-header>
 <app-sidebar></app-sidebar>
-<span></span><app-user></app-user>
+<ul *ngFor = "let data of httpdata">
+   <li>Name : {{data.name}} Address: {{data.address.city}}</li>
+</ul>

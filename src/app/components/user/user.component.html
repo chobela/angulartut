@@ -19,8 +19,21 @@
 <ul>
 
 <li *ngFor= "let hobby of hobbies; let i = index">{{i + 1}}: {{hobby}}</li>
+<a routerLink = "services">New component</a>
+
+</ul>
+
+
+<h1>
+  Days
+</h1>
+
+<ul>
+<li *ngFor= "let day of days; let i = index"> {{i+1}} {{day}}</li>
 
 </ul>
 
 <button (click)="onClick()" >Click me</button>
 </div> 
+
+<router-outlet></router-outlet>

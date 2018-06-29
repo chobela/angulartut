@@ -13,6 +13,8 @@ export class UserComponent implements OnInit {
   email:string;
   address:Address;
   hobbies:string[];
+  days:string[];
+  availabble:boolean;
 
   constructor() { }
 
@@ -27,6 +29,8 @@ export class UserComponent implements OnInit {
       state:'Copperbelt'
     };
     this.hobbies = ['write code', 'watch soccer', 'watch movies'];
+    this.days = ['monday', 'tuesday', 'wednesday'];
+    this.availabble = false;
   }
 
   onClick(){

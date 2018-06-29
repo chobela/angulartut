@@ -5,17 +5,29 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ServicesComponent } from './components/services/services.component';
+import { RouterModule} from '@angular/router';
+import { MyserviceService } from './services/myservice.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     SidebarComponent,
-    HeaderComponent  
+    HeaderComponent,
+    ServicesComponent  
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+         {
+            path: 'services',
+            component: ServicesComponent
+         }
+      ])
   ],
   providers: [],
   bootstrap: [AppComponent]
